@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+        <meta charset="UTF-8">
+        <title>Pie's Schema Generator</title>
+        <link rel="stylesheet" type="text/css" href="./dist/swagger-ui.css" />
+        <link rel="stylesheet" type="text/css" href="./dist/index.css" />
+        <link rel="icon" type="image/png" href="./dist/favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="./dist/favicon-16x16.png" sizes="16x16" />
+        <script src="./dist/swagger-ui-bundle.js"></script>
+        <script src="./dist/swagger-ui-standalone-preset.js"></script>
+        <script src="./schema-generator.js"></script>
+    </head>
+    <body>
+        <h1>Minecraft Schema Generator</h1>
+        <label for="upload_input">Upload Json Files:</label>
+        <input id="upload_input" type="file" webkitdirectory directory multiple />
+        <script>
+            let upload_input = document.getElementById('upload_input');
+            upload_input.onchange = function(event) {
+                onFileUploadEventHandler(event);
+            };
+        </script>
+        <div id="swagger-ui"></div>
+    </body>
+</html>
